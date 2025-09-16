@@ -29,6 +29,10 @@ ATTENTION à Amazon → vérifier que c’est disponible par PPZ
 PCB en dehors du budget projet
 KiCAD neuf (dernière version)
 
+PCB d'ici Toussaint (gestion de solénoïdes+2 boutons)
+PCB d'ici Noël (+étoffée)
+
+
 Pour l’atelier mécanique, dire qu’on est en projet avec Tauvel
 
 Stock de composant de PPZ dans la 265 (fichiers avec ce qui est dedans, boîtes ne sortent jamais du Tiroclasse) : Diode, transistor, bobine, driver, condensateur…. (évite de passer des commandes)
