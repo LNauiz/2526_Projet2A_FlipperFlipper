@@ -7,5 +7,5 @@ faire un railgun (plein de bobine les unes après les autres) (voir Electroboom 
 - Buck (pas pour 230 V car pas isolé (flyback normalement)) -> solution chargeur de PC ou truc industriel : pour la prise secteur (contrôle la puissance : hacheurs? Transformateurs?) 
 - Châssis: Table en bois laqué + fine couche de métal en renfort dans les angles
 - Affichage LED? -> panneau LED (matrice de LED)
-- Bumpers? rond et triangulaire
+- Bumpers? rond et triangulaire (solénoïde+2 tiges de fer)
 - Bouton poussoir (classique)
