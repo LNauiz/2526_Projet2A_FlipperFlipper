@@ -1,0 +1,7 @@
+- bras de lancement : 2 servomoteurs -> régler le couple + la vitesse (faire des contours en plus)
+- Bille en quelle matière? -> liège, métal (1cm, 27mm à 70g)
+- Taille réelle? x 0.7?
+- Buck pour la prise secteur (contrôle la puissance : hacheurs? Transformateurs?) 
+- Châssis: Table en bois laqué + fine couche de métal (1mm)
+- Affichage LED? LED/LED ou autre?
+- Bumpers?
