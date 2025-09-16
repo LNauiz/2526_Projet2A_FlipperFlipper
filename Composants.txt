@@ -8,3 +8,4 @@ faire un railgun (plein de bobine les unes après les autres) (voir Electroboom 
 - Châssis: Table en bois laqué + fine couche de métal en renfort dans les angles
 - Affichage LED? -> panneau LED (matrice de LED)
 - Bumpers? rond et triangulaire
+- Bouton poussoir (classique
