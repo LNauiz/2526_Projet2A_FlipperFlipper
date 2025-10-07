@@ -3868,12 +3868,6 @@
 		(uuid "888d1622-49f5-4150-91e9-46de4480e47e")
 	)
 	(junction
-		(at 208.28 160.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "91c6f779-5c40-4753-a1b1-551ec98041b6")
-	)
-	(junction
 		(at 248.92 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3896,12 +3890,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aae1ed5a-fdb0-407c-8681-066126eceb6b")
-	)
-	(junction
-		(at 200.66 160.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b6f744bd-7281-499a-a86f-e388df6a8937")
 	)
 	(junction
 		(at 57.15 173.99)
@@ -3934,10 +3922,22 @@
 		(uuid "c7e93481-a4b4-4644-93ae-94d9184c5c27")
 	)
 	(junction
+		(at 208.28 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c8d81435-158e-435d-89b5-b123f88c785e")
+	)
+	(junction
 		(at 243.84 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d3c85449-6df3-46f9-8bdf-86abd9cc05dc")
+	)
+	(junction
+		(at 200.66 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "de795803-b8e0-406b-8c9a-78882e3eda14")
 	)
 	(junction
 		(at 250.19 33.02)
@@ -4169,16 +4169,6 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 147.32) (xy 208.28 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1903308f-47c1-4598-8c7d-a8fbe95afdf9")
-	)
-	(wire
-		(pts
 			(xy 243.84 87.63) (xy 261.62 87.63)
 		)
 		(stroke
@@ -4369,13 +4359,13 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 154.94) (xy 200.66 160.02)
+			(xy 200.66 144.78) (xy 200.66 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "55ff5d40-80f7-4717-9e1c-da1ab57923ac")
+		(uuid "5935f369-a657-45d2-97e0-38e672d82d14")
 	)
 	(wire
 		(pts
@@ -4389,13 +4379,13 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 144.78) (xy 200.66 149.86)
+			(xy 200.66 154.94) (xy 200.66 160.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "609d01c3-4c9f-4119-8b81-1e9991453d4a")
+		(uuid "61ba1666-ba6b-44dc-9284-f11f31c7ee3d")
 	)
 	(wire
 		(pts
@@ -4449,16 +4439,6 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 156.21) (xy 208.28 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7bc20df0-6a67-4847-89eb-26ad2bc658dc")
-	)
-	(wire
-		(pts
 			(xy 60.96 88.9) (xy 60.96 91.44)
 		)
 		(stroke
@@ -4466,6 +4446,16 @@
 			(type default)
 		)
 		(uuid "7e7763dc-d4be-4497-abd7-8e5b569424aa")
+	)
+	(wire
+		(pts
+			(xy 208.28 160.02) (xy 231.14 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f1b40b4-87fd-457b-b3eb-fa544bdc03ed")
 	)
 	(wire
 		(pts
@@ -4506,6 +4496,16 @@
 			(type default)
 		)
 		(uuid "8334d81d-e11e-4511-b44c-4a424fd0cf89")
+	)
+	(wire
+		(pts
+			(xy 208.28 147.32) (xy 208.28 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88cce27a-a2a1-414a-87c1-c6f4ac4ba531")
 	)
 	(wire
 		(pts
@@ -4789,6 +4789,16 @@
 	)
 	(wire
 		(pts
+			(xy 208.28 156.21) (xy 208.28 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc55e901-84dc-4f66-a845-0ae52dc56b88")
+	)
+	(wire
+		(pts
 			(xy 261.62 87.63) (xy 261.62 82.55)
 		)
 		(stroke
@@ -4819,16 +4829,6 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 160.02) (xy 208.28 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd3c1d4b-8d9e-4fb0-8750-c9e969c5ccb6")
-	)
-	(wire
-		(pts
 			(xy 226.06 74.93) (xy 231.14 74.93)
 		)
 		(stroke
@@ -4836,6 +4836,16 @@
 			(type default)
 		)
 		(uuid "dd588d5b-180a-47ab-a766-dce834c78894")
+	)
+	(wire
+		(pts
+			(xy 200.66 160.02) (xy 208.28 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de1295b6-a418-4bef-8daa-d04debaca75b")
 	)
 	(wire
 		(pts
@@ -4939,7 +4949,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 160.02) (xy 231.14 160.02)
+			(xy 195.58 160.02) (xy 200.66 160.02)
 		)
 		(stroke
 			(width 0)
@@ -4966,16 +4976,6 @@
 			(type default)
 		)
 		(uuid "f248d2dd-063c-4c56-a39f-ef7ca22f2eab")
-	)
-	(wire
-		(pts
-			(xy 195.58 160.02) (xy 200.66 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f41f9c42-609e-4dc2-a63d-7d9f13ecaa55")
 	)
 	(wire
 		(pts
@@ -5686,7 +5686,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 200.66 152.4 0)
+		(at 208.28 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5695,7 +5695,7 @@
 		(fields_autoplaced yes)
 		(uuid "1f6e1b4c-8369-4ad5-a698-6786c376f1c6")
 		(property "Reference" "C3"
-			(at 203.2 151.1362 0)
+			(at 210.82 152.4062 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5704,7 +5704,7 @@
 			)
 		)
 		(property "Value" "1 µ"
-			(at 203.2 153.6762 0)
+			(at 210.82 154.9462 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5713,7 +5713,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 200.66 152.4 0)
+			(at 208.28 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5722,7 +5722,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 200.66 152.4 0)
+			(at 208.28 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5731,7 +5731,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 200.66 152.4 0)
+			(at 208.28 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8538,15 +8538,15 @@
 	(symbol
 		(lib_name "R_Small_1")
 		(lib_id "Device:R_Small")
-		(at 208.28 153.67 0)
+		(at 200.66 152.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "e59d728d-61d3-499f-b815-bd709acb310f")
-		(property "Reference" "R5"
-			(at 211.074 150.876 0)
+		(property "Reference" "5.6k"
+			(at 203.454 149.606 0)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -8555,7 +8555,7 @@
 			)
 		)
 		(property "Value" "R_Small"
-			(at 211.074 153.416 0)
+			(at 201.676 146.304 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8564,7 +8564,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 153.67 0)
+			(at 200.66 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8573,7 +8573,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 208.28 153.67 0)
+			(at 200.66 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8582,7 +8582,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 208.28 153.67 0)
+			(at 200.66 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8599,7 +8599,7 @@
 		(instances
 			(project "FliperKAd"
 				(path "/27859523-150b-47ee-b996-34d2328aaeb5"
-					(reference "R5")
+					(reference "5.6k")
 					(unit 1)
 				)
 			)
