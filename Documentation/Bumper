@@ -1,4 +1,2 @@
 Les bumpers classiques disposent d'un anneau qui détectent lorsque la bille est au niveau du bumper.
-Ce n'est pas ce que nous allons faire car la détection risque de ne pas se faire à chaque fois.
-
-Nous allons à la place mettre un anneau conducteur directement sur le terrain qui permettra de boucler un circuit lorsque la bille touchera ce dernier et l'anneau qui la repropulsera.
+Pour cela ils utilisent des capteurs de pression.
