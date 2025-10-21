@@ -1,2 +1,3 @@
 Les bumpers classiques disposent d'un anneau qui détectent lorsque la bille est au niveau du bumper.
-Pour cela ils utilisent des capteurs de pression.
+C'est une solution mécanique qui est moins élégante qu'une solution éléctrique.
+Ainsi nous allons faire en sorte que la bille boucle un circuit entre le cylindre centrale du bumper et un anneau positionné au niveau du terrain de jeu.
