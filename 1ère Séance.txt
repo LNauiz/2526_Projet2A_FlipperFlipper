@@ -37,3 +37,5 @@ Pour l’atelier mécanique, dire qu’on est en projet avec Tauvel
 
 Stock de composant de PPZ dans la 265 (fichiers avec ce qui est dedans, boîtes ne sortent jamais du Tiroclasse) : Diode, transistor, bobine, driver, condensateur…. (évite de passer des commandes)
 Si plus de stock prévenir
+
+https://www.amazon.fr/cuivre-émaillé-diamètre-2-5mm-longueur/dp/B09FG69FK7
