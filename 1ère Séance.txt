@@ -11,7 +11,7 @@ Remplir le github
 	-readme (évalué) quelqu’un qui ne connaît pas le projet doit pouvoir le refaire chez lui
 	-lien vers un journal de bord sur le github (détail séance/séance)
 	-seul moyen de communiquer avec les profs
-nom gitbuh : 2526_Projet2A_<nom_du_projet>
+nom github : 2526_Projet2A_<nom_du_projet>
 
 Ranger la salle (sinon PPZ agrougrou), au-dessus de la paillasse c’est ok, sinon armoire projet 2A
 → enlève 1 point par non rangement
@@ -29,7 +29,7 @@ ATTENTION à Amazon → vérifier que c’est disponible par PPZ
 PCB en dehors du budget projet
 KiCAD neuf (dernière version)
 
-PCB d'ici Toussaint (gestion de solénoïdes+2 boutons)
+PCB d'ici Toussaint (gestion de solénoïdes + 2 boutons)
 PCB d'ici Noël (+étoffée)
 
 
