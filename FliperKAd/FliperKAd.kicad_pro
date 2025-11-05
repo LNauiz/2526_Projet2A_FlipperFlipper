@@ -60,6 +60,10 @@
       ],
       "drc_exclusions": [
         [
+          "clearance|222188462|100332692|366a5a38-b5db-4164-b789-815643d4442c|a7d590c2-f85f-4daf-955e-548a27c811fa",
+          ""
+        ],
+        [
           "clearance|223138462|78382692|c7d2f7e4-1b90-453a-b956-a00b022bafde|80a4239d-a78d-44a4-8225-ea090e36b177",
           ""
         ]
@@ -529,6 +533,14 @@
       {
         "netclass": "PWR",
         "pattern": "Test 3.3"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "+12V"
+      },
+      {
+        "netclass": "Default",
+        "pattern": ""
       }
     ]
   },

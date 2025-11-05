@@ -2,6 +2,68 @@
 	(version 20241209)
 	(generator "kicad_symbol_editor")
 	(generator_version "9.0")
+	(symbol "173951275_"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "173951275__1_1"
+			(rectangle
+				(start -2.032 2.794)
+				(end 2.032 -3.556)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "MCP1640x-xMC"
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -322,7 +384,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(symbol "MIC2505"
+	(symbol "MIC4426"
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -369,7 +431,7 @@
 				(hide yes)
 			)
 		)
-		(symbol "MIC2505_1_1"
+		(symbol "MIC4426_1_1"
 			(rectangle
 				(start -7.62 7.62)
 				(end 7.62 -8.89)
@@ -381,10 +443,10 @@
 					(type background)
 				)
 			)
-			(pin input line
+			(pin no_connect line
 				(at -10.16 5.08 0)
 				(length 2.54)
-				(name "CTL"
+				(name "NC"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -399,10 +461,10 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at -10.16 1.27 0)
 				(length 2.54)
-				(name "FLG"
+				(name "INA"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -417,7 +479,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at -10.16 -2.54 0)
 				(length 2.54)
 				(name "GND"
@@ -435,10 +497,10 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at -10.16 -6.35 0)
 				(length 2.54)
-				(name "GATE"
+				(name "INB"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -453,17 +515,35 @@
 					)
 				)
 			)
-			(pin input line
+			(pin no_connect line
 				(at 10.16 5.08 180)
 				(length 2.54)
-				(name "In"
+				(name "NC"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "5"
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 10.16 1.27 180)
+				(length 2.54)
+				(name "OUTA"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -474,7 +554,7 @@
 			(pin input line
 				(at 10.16 -2.54 180)
 				(length 2.54)
-				(name "In"
+				(name "Vs"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -492,14 +572,14 @@
 			(pin output line
 				(at 10.16 -6.35 180)
 				(length 2.54)
-				(name "Out"
+				(name "OUTB"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number ""
+				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
