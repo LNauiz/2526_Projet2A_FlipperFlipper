@@ -4641,6 +4641,12 @@
 		(uuid "03d90f71-f7d6-4b03-b0fd-b6231b32b7cf")
 	)
 	(junction
+		(at 115.57 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0a39319b-8682-47f0-a5eb-82993eb8a4eb")
+	)
+	(junction
 		(at 97.79 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5214,7 +5220,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 153.67) (xy 115.57 154.94)
+			(xy 106.68 148.59) (xy 106.68 154.94)
 		)
 		(stroke
 			(width 0)
@@ -5444,6 +5450,16 @@
 	)
 	(wire
 		(pts
+			(xy 106.68 142.24) (xy 106.68 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5066d5b6-d44d-42e8-93ba-780a24a46e6d")
+	)
+	(wire
+		(pts
 			(xy 210.82 132.08) (xy 210.82 133.35)
 		)
 		(stroke
@@ -5614,13 +5630,23 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 143.51) (xy 115.57 142.24)
+			(xy 115.57 146.05) (xy 115.57 142.24)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "742b3364-8c7a-4b92-9fb5-acce0299b529")
+	)
+	(wire
+		(pts
+			(xy 115.57 151.13) (xy 115.57 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77ddbe1f-6a59-406e-b6f4-aa21cacda0a7")
 	)
 	(wire
 		(pts
@@ -5734,7 +5760,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 154.94) (xy 127 154.94)
+			(xy 106.68 154.94) (xy 115.57 154.94)
 		)
 		(stroke
 			(width 0)
@@ -6154,6 +6180,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 154.94) (xy 127 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf2b7158-68c3-47cc-9dac-4cb3cd877868")
+	)
+	(wire
+		(pts
 			(xy 237.49 99.06) (xy 242.57 99.06)
 		)
 		(stroke
@@ -6331,6 +6367,16 @@
 			(type default)
 		)
 		(uuid "e0d3740e-256c-45f0-a6e7-24fddac3ef0c")
+	)
+	(wire
+		(pts
+			(xy 115.57 142.24) (xy 106.68 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1bc6d9f-dc03-4429-bf38-3882e1daa9a1")
 	)
 	(wire
 		(pts
@@ -8267,7 +8313,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TO-263-3_TabPin4"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-3_TabPin2"
 			(at 173.99 83.82 0)
 			(effects
 				(font
@@ -10827,7 +10873,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 115.57 151.13 0)
+		(at 106.68 146.05 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10836,7 +10882,7 @@
 		(fields_autoplaced yes)
 		(uuid "ac224c98-af88-4f2e-bf3b-0e229c903f52")
 		(property "Reference" "C12"
-			(at 118.11 149.8662 0)
+			(at 109.22 144.7862 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10845,7 +10891,7 @@
 			)
 		)
 		(property "Value" "10 µ"
-			(at 118.11 152.4062 0)
+			(at 109.22 147.3262 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10854,7 +10900,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 115.57 151.13 0)
+			(at 106.68 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10863,7 +10909,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 115.57 151.13 0)
+			(at 106.68 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10872,7 +10918,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 115.57 151.13 0)
+			(at 106.68 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12667,7 +12713,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TO-263-3_TabPin4"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-3_TabPin2"
 			(at 173.99 36.83 0)
 			(effects
 				(font
@@ -12877,7 +12923,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 115.57 146.05 0)
+		(at 115.57 148.59 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12885,7 +12931,7 @@
 		(dnp no)
 		(uuid "f656c1f8-be33-43b8-a9d6-82c636fd5095")
 		(property "Reference" "C5"
-			(at 108.966 143.764 0)
+			(at 108.966 146.304 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12894,7 +12940,7 @@
 			)
 		)
 		(property "Value" "10 µ"
-			(at 108.204 146.812 0)
+			(at 108.204 149.352 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12903,7 +12949,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 115.57 146.05 0)
+			(at 115.57 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12912,7 +12958,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 115.57 146.05 0)
+			(at 115.57 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12921,7 +12967,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 115.57 146.05 0)
+			(at 115.57 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
