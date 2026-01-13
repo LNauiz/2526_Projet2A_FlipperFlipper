@@ -47,8 +47,12 @@ Lors des tests, le Buck de ce premier PCB est fortement monté en température. 
 
 Lors des test, le Buck de ce PCB est également monté en température. Nous pensons que le problème viendrait d'un court-circuit créé lors de la soudure Pour poursuivre notre projet nous avons décidé de changer ce composant.
 ## Le Compteur
+Afin d'afficher le score réalisé par le joueur nous devons réaliser un compteur, pour ce faire nous utiliserons des Néopixels, le code serait réalisé en langage C. Voici le support (réalisé sur Onshape) sur lequel nous voulons coller et souder les néopixels : 
+![compteur_imprimé](Image/compteur_imprimé.png)
 
 ## Le Châssis
-
+Afin d'avoir un support pour notre flipper, nous avons dessiné sur Onshape un châssis en prenant en compte la pente réglementaire pour un Flipper classique qui est de **6,5 °**.
+![Châssis Flipper](Image/Châssis_flipper.png)
+Après avoir réalisé ceci nous sommes entrain de faire la table de jeux qui sera réalisé en 2 couches (afin de pouvoir varier les épaisseurs et de pouvoir y emboîter les supports pour bumper ou batteur)
 # Licence
 Licence : MIT
