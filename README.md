@@ -1,4 +1,4 @@
-# 2526_Projet2A_FlipperFlipper
+# 2526_Projet2A_Flipper
 Flipper le d'eau fin
 
 
