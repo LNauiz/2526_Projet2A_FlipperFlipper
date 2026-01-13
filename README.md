@@ -1,7 +1,8 @@
 # 2526_Projet2A_Flipper
 Notre objectif est de réaliser un Flipper (ou billard électrique). Notre flipper aurait tous les éléments suivants : les batteurs, les bumpers, un lanceur, un compteur de point et des éclairages (réalisés avec des néopixels), tels que montré sur les dessins suivants : 
 ![Schéma flipper](Image/Schéma_flipper.png) ![dessin](Image/Table_jeux.png)
-Afin de marquer des points, le joueur doit soit passer entre les dauphins soit tapper contre le point 1 ou encore taper contre les différents bumpers.
+
+Afin de marquer des points, le joueur doit soit passer entre les dauphins soit tapper contre les pièces triangulaires ou contre les bumpers.
 
 ## Les Bumpers
 Pour réaliser les bumpers on utilise des **solénoïdes** que nous commençons par tester : 
