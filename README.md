@@ -5,8 +5,11 @@ Notre objectif est de réaliser un Flipper (ou billard électrique). Notre flipp
 Afin de marquer des points, le joueur doit soit passer entre les dauphins soit tapper contre les pièces triangulaires ou contre les bumpers.
 ### Matériel
 Solénoïdes*4 : Heschen Electroaimant solénoïde, HS-1546B, DC24V, 1.5A, course 20 mm, type Push Pull
+
 Néopixels alimentées à 5 V
+
 Détails de la PCB seront donnés dans la partie concernée
+
 Photo diode : 
 
 ### Logiciels utilisés
