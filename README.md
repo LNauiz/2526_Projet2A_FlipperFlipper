@@ -16,11 +16,16 @@ Photo diode Silicium :
 KiCAD (design PCB), STM32CubeIDE (Software), Onshape (Modélisation 3D)
 
 ## Les Bumpers
-Pour réaliser les bumpers on utilise des **solénoïdes** que nous commençons par tester : 
+![Schéma fonctionnement bumper](Image/Schéma_fonctionnement_Bumper.png)
+Le fonctionnement du bumper est le suivant : lorsque la balle arrive contre le bumper, elle boucle un circuit entre un anneau proche du circuit ainsi que le cylindre central ce qui va provoquer l'abattement d'une collerette (nommée "metal flange with studs" sur le schéma) repoussant ainsi la balle.
+Pour réaliser cet "abattement" on utilise des **solénoïdes** que nous commençons par tester : 
 ### _Premier test solénoïde_
 
 ![premier test solénoïde](Image/Appel-de_courant.png)
 
+afin d'utiliser ces solénoïdes pour réaliser des bumpers nous avons besoin d'un support (que nous avons dessiné sur Onshape) :
+![Support bumper imprimé](Image/Bumper_imprimé.png)
+Nous sommes actuellement entrain détudier si le remplissage par défaut est adapté à l'utilisation que nous souhaitons en faire
 ## Les Batteurs
 Les batteurs sont au nombre de 2 et seront contrôlés par des boutons poussoirs qui activeront d'autres solénoïdes. Ainsi nous avons du réaliser un dispositif afin de pouvoir tranformer la translation produite par le solénoïde en rotation de 60° pour les batteurs. Par Onshape, on modélise les pièces suivantes : 
 ![Batteur total](Image/Batteur_onshape.png) ![batteur uniquement](Image/batteur.png) ![raccordement](Image/raccordement_onshape.png)
