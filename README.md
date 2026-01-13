@@ -14,7 +14,7 @@ Détails de la PCB seront donnés dans la partie concernée
 KiCAD (design PCB), STM32CubeIDE (Software), Onshape (Modélisation 3D)
 
 ## Les Bumpers
-![Schéma fonctionnement bumper](Image/Schéma_fonctionnement_Bumper.png)
+![Schéma fonctionnement bumper](Image/Schéma_fonctionnement_bumper.png)
 Le fonctionnement du bumper est le suivant : lorsque la balle arrive contre le bumper, elle boucle un circuit entre un anneau proche du circuit ainsi que le cylindre central ce qui va provoquer l'abattement d'une collerette (nommée "metal flange with studs" sur le schéma) repoussant ainsi la balle.
 Pour réaliser cet "abattement" on utilise des **solénoïdes** que nous commençons par tester : 
 ### _Premier test solénoïde_
