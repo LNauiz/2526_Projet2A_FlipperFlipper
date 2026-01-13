@@ -25,6 +25,7 @@ Pour réaliser cet "abattement" on utilise des **solénoïdes** que nous commen�
 ![premier test solénoïde](Image/Appel-de_courant.png)
 
 afin d'utiliser ces solénoïdes pour réaliser des bumpers nous avons besoin d'un support (que nous avons dessiné sur Onshape) :
+
 ![Support bumper imprimé](Image/Bumper_imprimé.png)
 
 Nous sommes actuellement entrain détudier si le remplissage par défaut est adapté à l'utilisation que nous souhaitons en faire
