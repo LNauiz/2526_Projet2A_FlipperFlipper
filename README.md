@@ -4,7 +4,7 @@ Notre objectif est de réaliser un Flipper (ou billard électrique). Notre flipp
 Afin de marquer des points, le joueur doit soit passer entre les dauphins soit tapper contre le point 1 ou encore taper contre les différents bumpers.
 
 ## Les Bumpers
-Pour réaliser les bumpers on utilise des solénoïdes que nous commençons par tester : 
+Pour réaliser les bumpers on utilise des **solénoïdes** que nous commençons par tester : 
 ### _Premier test solénoïde_
 
 ![premier test solénoïde](Image/Appel-de_courant.png)
@@ -13,7 +13,7 @@ Pour réaliser les bumpers on utilise des solénoïdes que nous commençons par 
 Les batteurs sont au nombre de 2 et seront contrôlés par des boutons poussoirs qui activeront d'autres solénoïdes.
 ## Le Lanceur
 La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont le principe est le suivant : 
-Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à ... km/h lors du lancement ainsi le dimmensionnement de notre CoilGun serait le suivant : 
+Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre CoilGun serait le suivant : 
 ![Calculs Coilgun](Image/Calculs_Coilgun.png)
 ## Le Châssis
 
