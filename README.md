@@ -38,12 +38,14 @@ La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont
 Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre Coilgun serait le suivant : 
 ![Calculs Coilgun](Image/Calculs_Coilgun.png)
 ## Le PCB
-Afin de commander les solénoïdes et de convertir les ... V d'alimentation nous avons réalisé (sur KiCAD) et soudé un premier PCB que voici : 
+Afin de commander les solénoïdes nous avons réalisé (sur KiCAD) et soudé un premier PCB que voici : 
 ![PCB 1](Image/PCB_1_soudé.png)
+
 Lors des soudures nous avons rencontré plusieurs problèmes tels que des empreintes erronées (une résistance R et un condensateur sous-estimés en taille et une patte manquante sur les MOSFETs)
 Lors des tests, le Buck de ce premier PCB est fortement monté en température. Nous sommes donc passé au montage suivant (PCB corrigé par Monsieur Papazoglou) :
 ![PCB 2](Image/PCB_2_soudé.png)
-Lors des test, le Buck de ce PCB est également monté en température. Pour poursuivre notre projet nous 
+
+Lors des test, le Buck de ce PCB est également monté en température. Nous pensons que le problème viendrait d'un court-circuit créé lors de la soudure Pour poursuivre notre projet nous avons décidé de changer ce composant.
 ## Le Compteur
 
 ## Le Châssis
