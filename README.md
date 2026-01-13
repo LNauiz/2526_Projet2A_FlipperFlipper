@@ -3,6 +3,8 @@ Notre objectif est de réaliser un Flipper (ou billard électrique). Notre flipp
 ![Schéma flipper](Image/Schéma_flipper.png) ![dessin](Image/Table_jeux.png)
 
 Afin de marquer des points, le joueur doit soit passer entre les dauphins soit tapper contre les pièces triangulaires ou contre les bumpers.
+## Logiciels utilisés
+KiCAD (PCB), STM32CubeIDE (software), Onshape (Modélisation 3D)
 
 ## Les Bumpers
 Pour réaliser les bumpers on utilise des **solénoïdes** que nous commençons par tester : 
@@ -16,6 +18,7 @@ Les batteurs sont au nombre de 2 et seront contrôlés par des boutons poussoirs
 La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont le principe est le suivant : 
 Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre CoilGun serait le suivant : 
 ![Calculs Coilgun](Image/Calculs_Coilgun.png)
+
 ## Le Châssis
 
 ## Le PCB
