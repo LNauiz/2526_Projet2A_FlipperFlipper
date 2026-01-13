@@ -55,6 +55,7 @@ Afin d'avoir un support pour notre flipper, nous avons dessiné sur Onshape un c
 
 ![Châssis Flipper](Image/Châssis_Flipper.png)
 
+Le châssis comporte une ouverture afin d'y brancher l'alimentation ainsi que des aérations permettant la ventilation de notre système.
 Après avoir réalisé ceci nous sommes entrain de faire la table de jeux qui sera réalisé en 2 couches (afin de pouvoir varier les épaisseurs et de pouvoir y emboîter les supports pour bumper ou batteur)
 # Licence
 Licence : MIT
