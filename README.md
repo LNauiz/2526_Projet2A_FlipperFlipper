@@ -25,20 +25,20 @@ Pour réaliser cet "abattement" on utilise des **solénoïdes** que nous commen�
 
 afin d'utiliser ces solénoïdes pour réaliser des bumpers nous avons besoin d'un support (que nous avons dessiné sur Onshape) :
 ![Support bumper imprimé](Image/Bumper_imprimé.png)
+
 Nous sommes actuellement entrain détudier si le remplissage par défaut est adapté à l'utilisation que nous souhaitons en faire
 ## Les Batteurs
 Les batteurs sont au nombre de 2 et seront contrôlés par des boutons poussoirs qui activeront d'autres solénoïdes. Ainsi nous avons du réaliser un dispositif afin de pouvoir tranformer la translation produite par le solénoïde en rotation de 60° pour les batteurs. Par Onshape, on modélise les pièces suivantes : 
 ![Batteur total](Image/Batteur_onshape.png) ![batteur uniquement](Image/batteur.png) ![raccordement](Image/raccordement_onshape.png)
 ## Le Lanceur
 La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont le principe est le suivant : 
-Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre CoilGun serait le suivant : 
+Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre Coilgun serait le suivant : 
 ![Calculs Coilgun](Image/Calculs_Coilgun.png)
-
 ## Le Châssis
 
-## Le PCB
+## Le Compteur
 
-## 
+## Le Châssis
 
 # Licence
 Licence : MIT
