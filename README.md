@@ -33,3 +33,6 @@ Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 
 ## Le PCB
 
 ## 
+
+# Licence
+Licence : MIT
