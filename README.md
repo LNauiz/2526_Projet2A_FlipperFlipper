@@ -10,7 +10,7 @@ Néopixels alimentées à 5 V
 
 Détails de la PCB seront donnés dans la partie concernée
 
-Photo diode : 
+Photo diode Silicium : 
 
 ### Logiciels utilisés
 KiCAD (design PCB), STM32CubeIDE (Software), Onshape (Modélisation 3D)
@@ -22,7 +22,8 @@ Pour réaliser les bumpers on utilise des **solénoïdes** que nous commençons 
 ![premier test solénoïde](Image/Appel-de_courant.png)
 
 ## Les Batteurs
-Les batteurs sont au nombre de 2 et seront contrôlés par des boutons poussoirs qui activeront d'autres solénoïdes.
+Les batteurs sont au nombre de 2 et seront contrôlés par des boutons poussoirs qui activeront d'autres solénoïdes. Ainsi nous avons du réaliser un dispositif afin de pouvoir tranformer la translation produite par le solénoïde en rotation de 60° pour les batteurs. Par Onshape, on modélise les pièces suivantes : 
+![Batteur total](Image/Batteur_onshape.png) ![batteur uniquement](Image/batteur.png) ![raccordement](Image/raccordement_onshape.png)
 ## Le Lanceur
 La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont le principe est le suivant : 
 Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre CoilGun serait le suivant : 
