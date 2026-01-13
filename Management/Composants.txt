@@ -1,0 +1,13 @@
+- Flipper (bras qui bouge quand touche appuyée) : 2 servomoteurs -> régler le couple + la vitesse (faire des contours en plus)
+ou solénoïde aussi qui pousse un bras
+- Base de lancement : ressort ou électromagnétique? (2ème option = bille en métal) ou solénoïde (MCC qui avance ou recule)
+faire un railgun (plein de bobine les unes après les autres) (voir Electroboom coilgun ou railgun)
+https://web.archive.org/web/20161020104714/http://phome.postech.ac.kr/user/edulab/phy1032015/coilgun_01.pdf
+- bille en quelle matière? -> liège, métal (1cm, 27mm de diam à 70g)
+- Taille réelle? x 0.7?
+- Buck (pas pour 230 V car pas isolé (flyback normalement)) -> solution chargeur de PC ou truc industriel : pour la prise secteur (contrôle la puissance : hacheurs? Transformateurs?) 
+- Châssis: Table en bois laqué + fine couche de métal en renfort dans les angles
+- Affichage LED? -> panneau LED (matrice de LED)
+- Bumpers? rond et triangulaire (rond : solénoïde+2 tiges de fer)
+  (triangulaire : élastique qui une fois tendu, pas placé à l'équerre par rapport à la table)
+- Bouton poussoir (classique)
