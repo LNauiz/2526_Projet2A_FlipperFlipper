@@ -10,8 +10,6 @@ Néopixels alimentées à 5 V
 
 Détails de la PCB seront donnés dans la partie concernée
 
-Photo diode Silicium : 
-
 ### Logiciels utilisés
 KiCAD (design PCB), STM32CubeIDE (Software), Onshape (Modélisation 3D)
 
