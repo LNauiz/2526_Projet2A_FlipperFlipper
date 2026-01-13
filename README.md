@@ -54,6 +54,7 @@ Afin d'afficher le score réalisé par le joueur nous devons réaliser un compte
 
 ## Le Châssis
 Afin d'avoir un support pour notre flipper, nous avons dessiné sur Onshape un châssis en prenant en compte la pente réglementaire pour un Flipper classique qui est de **6,5 °**.
+
 ![Châssis Flipper](Image/Châssis_Flipper.png)
 Après avoir réalisé ceci nous sommes entrain de faire la table de jeux qui sera réalisé en 2 couches (afin de pouvoir varier les épaisseurs et de pouvoir y emboîter les supports pour bumper ou batteur)
 # Licence
