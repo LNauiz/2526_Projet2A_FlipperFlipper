@@ -62,4 +62,5 @@ Le châssis comporte une ouverture afin d'y brancher l'alimentation ainsi que de
 Après avoir réalisé ceci nous sommes entrain de faire la table de jeux qui sera réalisé en 2 couches (afin de pouvoir varier les épaisseurs et de pouvoir y emboîter les supports pour bumper ou batteur)
 # Licence
 Licence : MIT
+
 Auteurs : Julie Deissard--Decot, Léonard Navizet, Maxime Beltoise, Johann Mansard
