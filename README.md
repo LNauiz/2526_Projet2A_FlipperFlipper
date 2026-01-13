@@ -15,6 +15,7 @@ KiCAD (design PCB), STM32CubeIDE (Software), Onshape (Modélisation 3D)
 
 ## Les Bumpers
 ![Schéma fonctionnement bumper](Image/Schéma_fonctionnement_bumper.png)
+
 Le fonctionnement du bumper est le suivant : lorsque la balle arrive contre le bumper, elle boucle un circuit entre un anneau proche du circuit ainsi que le cylindre central ce qui va provoquer l'abattement d'une collerette (nommée "metal flange with studs" sur le schéma) repoussant ainsi la balle.
 Pour réaliser cet "abattement" on utilise des **solénoïdes** que nous commençons par tester : 
 ### _Premier test solénoïde_
@@ -34,7 +35,7 @@ Nous devons encore modifier ces dessins afin d'éviter de trop gros frottement i
 ## Le Lanceur
 La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont le principe est le suivant : 
 Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre Coilgun serait le suivant : 
-![Calculs Coilgun](Image/Calculs_Coilgun.png)
+![Calculs Coilgun](Image/Formules_Coilgun.png)
 ## Le PCB
 Afin de commander les solénoïdes nous avons réalisé (sur KiCAD) et soudé un premier PCB que voici : 
 ![PCB 1](Image/PCB_1_soudé.png)
