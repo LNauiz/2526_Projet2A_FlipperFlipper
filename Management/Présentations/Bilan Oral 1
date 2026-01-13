@@ -1,0 +1,14 @@
+- Fonctionnement bumper? + capteurs? Comment on détecte la balle sur les bumpers?-> capteur fin de course (+triangulaire -> pression élastique+bras de levier)
+- QTE lancement de la bille?
+- Capter la bille une fois sortie? -> capteur fin de course ou magnétique
+- Grandeurs en jeux avec le CoilGun? -> partir de la vitesse de sortie d'une bille de flipper classique pour ensuite dimensionner le Coilgun, Attention la tension
+- Infos importantes Solénoïdes : tension/courant (en fonctionnement)
+- Est-ce qu'on centralise tous les éléments? (oui parce que le comptage) -> Comment c'est fait dans les flippers actuels le comptage de point?
+- Pb alim résolu : alim entre 10€ et 50€, 48V 10A ou tout en 12V -> Alim 24V
+- Neopixel pour les LED chez AliExpress (20€ les 1000) couche fine 3D en blanc pour cacher la source
+- PCB vernis peut être ok pour 450V (attention norme et pas mourir)
+
+To do list pour la prochaine fois :
+-Dimensionner tout (faire un plan du flipper)
+-Architecture globale (Solidworks?)
+-Quoi éclairer avec les NeoPixels?

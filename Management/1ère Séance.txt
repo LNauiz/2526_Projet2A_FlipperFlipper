@@ -1,0 +1,41 @@
+-Présentation toutes les 3 semaines pour chaque groupe (revue de projet, pas de façon formelle, sous forme de réunion, on explique les avancées, les points bloquants…) → évalué au fur et à mesure
+quand même faire des slides : schéma propre, journal de bord…
+ne pas passer 4h à faire des slides
+→ Travailler entre les séances (en 4h/semaine impossible de réaliser totalement le projet)
+
+Suivi de projet :
+	-faire un GANT (planifier les choses)
+	-faire un projet git
+Remplir le github
+	-page d’accueil propre
+	-readme (évalué) quelqu’un qui ne connaît pas le projet doit pouvoir le refaire chez lui
+	-lien vers un journal de bord sur le github (détail séance/séance)
+	-seul moyen de communiquer avec les profs
+nom github : 2526_Projet2A_<nom_du_projet>
+
+Ranger la salle (sinon PPZ agrougrou), au-dessus de la paillasse c’est ok, sinon armoire projet 2A
+→ enlève 1 point par non rangement
+
+On a 80€ par étudiant sur le projet (40€ ce semestre et 40€ le prochain) 
+→ passer commande avant le 31 décembre 2025
+ 
+Pour passer les commandes :
+-Libreoffice calc (colonne E: le nom, désignation : convertisseur analogique numérique (pas la réf, mettre code commande), la quantité (prendre en rab))
+date de livraison → =date du jour+1 semaine 
+prix hors taxe (si c’est en dollar venir voir PPZ)
+
+sur FARNELL/RS/GoTronic…. on peut envoyer les paniers (histoire de ne pas se gourer de composant)
+ATTENTION à Amazon → vérifier que c’est disponible par PPZ
+PCB en dehors du budget projet
+KiCAD neuf (dernière version)
+
+PCB d'ici Toussaint (gestion de solénoïdes + 2 boutons)
+PCB d'ici Noël (+étoffée)
+
+
+Pour l’atelier mécanique, dire qu’on est en projet avec Tauvel
+
+Stock de composant de PPZ dans la 265 (fichiers avec ce qui est dedans, boîtes ne sortent jamais du Tiroclasse) : Diode, transistor, bobine, driver, condensateur…. (évite de passer des commandes)
+Si plus de stock prévenir
+
+https://www.amazon.fr/cuivre-émaillé-diamètre-2-5mm-longueur/dp/B09FG69FK7

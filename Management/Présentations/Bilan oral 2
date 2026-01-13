@@ -1,0 +1,18 @@
+Bumper :
+- 2ème solution -> boucler le circuit = plus élégant, faire un schéma élec ou en FPGA
+
+PCB :
+Pont de diode -> driver mosfet et mosfet
+Pistes de différentes tailles (faire : 24V sur 1/3 du PCB...)
+commande d'ici jeudi 23/10/2025
+
+Coilgun : 
+Manque un schéma
+Avant de commander besoin de : longueur de fil, diamètre exté et inté de la bobine, rayon de la spire, largeur de la bobine, nombre de spire, section fil
+Citer les sources
+
+Prochaine fois :
+-PCB soudé
+-Solénoïde
+-Schéma coilgun, bumper
+-Dimensionnement coilgun, bumper
