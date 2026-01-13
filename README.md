@@ -43,6 +43,8 @@ Afin de commander les solénoïdes nous avons réalisé (sur KiCAD) et soudé un
 
 Lors des soudures nous avons rencontré plusieurs problèmes tels que des empreintes erronées (une résistance R et un condensateur sous-estimés en taille et une patte manquante sur les MOSFETs)
 Lors des tests, le Buck de ce premier PCB est fortement monté en température. Nous sommes donc passé au montage suivant (PCB corrigé par Monsieur Papazoglou) :
+
+
 ![PCB 2](Image/PCB_2_soudé.png)
 
 Lors des test, le Buck de ce PCB est également monté en température. Nous pensons que le problème viendrait d'un court-circuit créé lors de la soudure Pour poursuivre notre projet nous avons décidé de changer ce composant.
@@ -52,7 +54,7 @@ Afin d'afficher le score réalisé par le joueur nous devons réaliser un compte
 
 ## Le Châssis
 Afin d'avoir un support pour notre flipper, nous avons dessiné sur Onshape un châssis en prenant en compte la pente réglementaire pour un Flipper classique qui est de **6,5 °**.
-![Châssis Flipper](Image/Châssis_flipper.png)
+![Châssis Flipper](Image/Châssis_Flipper.png)
 Après avoir réalisé ceci nous sommes entrain de faire la table de jeux qui sera réalisé en 2 couches (afin de pouvoir varier les épaisseurs et de pouvoir y emboîter les supports pour bumper ou batteur)
 # Licence
 Licence : MIT
