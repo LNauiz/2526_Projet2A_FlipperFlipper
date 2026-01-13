@@ -31,6 +31,7 @@ Nous sommes actuellement entrain détudier si le remplissage par défaut est ada
 Les batteurs sont au nombre de 2 et seront contrôlés par des boutons poussoirs qui activeront d'autres solénoïdes. Ainsi nous avons du réaliser un dispositif afin de pouvoir tranformer la translation produite par le solénoïde en rotation de 60° pour les batteurs. Par Onshape, on modélise les pièces suivantes : 
 
 ![Batteur total](Image/Batteur_onshape.png) ![batteur uniquement](Image/batteur.png) ![raccordement](Image/raccordement_onshape.png)
+
 Nous devons encore modifier ces dessins afin d'éviter de trop gros frottement il est nécessaire d'ajouter des écrous ainsi que des tiges filletées à l'intérieur des pièces.
 ## Le Lanceur
 La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont le principe est le suivant : 
@@ -39,8 +40,8 @@ Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 
 ## Le PCB
 Afin de commander les solénoïdes et de convertir les ... V d'alimentation nous avons réalisé (sur KiCAD) et soudé un premier PCB que voici : 
 ![PCB 1](Image/PCB_1_soudé.png)
-Lors des soudures nous avons rencontré plusieurs problèmes tels que des empreintes erronées
-Lors des tests, le Buck de ce premier PCB a fortement monté en température. Nous sommes donc passé au montage suivant (PCB corrigé par Monsieur Papazoglou) :
+Lors des soudures nous avons rencontré plusieurs problèmes tels que des empreintes erronées (une résistance R et un condensateur sous-estimés en taille et une patte manquante sur les MOSFETs)
+Lors des tests, le Buck de ce premier PCB est fortement monté en température. Nous sommes donc passé au montage suivant (PCB corrigé par Monsieur Papazoglou) :
 ![PCB 2](Image/PCB_2_soudé.png)
 Lors des test, le Buck de ce PCB est également monté en température. Pour poursuivre notre projet nous 
 ## Le Compteur
