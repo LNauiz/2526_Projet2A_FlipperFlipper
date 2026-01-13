@@ -1,7 +1,7 @@
 # 2526_Projet2A_Flipper
 Flipper le d'eau fin
 
-### Premier test solénoïde
+### _Premier test solénoïde_
 
 ![premier test solénoïde](Image/Appel-de_courant.png)
 
