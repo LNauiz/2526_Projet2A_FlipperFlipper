@@ -29,6 +29,7 @@ afin d'utiliser ces solénoïdes pour réaliser des bumpers nous avons besoin d'
 Nous sommes actuellement entrain détudier si le remplissage par défaut est adapté à l'utilisation que nous souhaitons en faire
 ## Les Batteurs
 Les batteurs sont au nombre de 2 et seront contrôlés par des boutons poussoirs qui activeront d'autres solénoïdes. Ainsi nous avons du réaliser un dispositif afin de pouvoir tranformer la translation produite par le solénoïde en rotation de 60° pour les batteurs. Par Onshape, on modélise les pièces suivantes : 
+
 ![Batteur total](Image/Batteur_onshape.png) ![batteur uniquement](Image/batteur.png) ![raccordement](Image/raccordement_onshape.png)
 ## Le Lanceur
 La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont le principe est le suivant : 
