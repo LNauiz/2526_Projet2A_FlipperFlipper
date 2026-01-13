@@ -3,8 +3,14 @@ Notre objectif est de réaliser un Flipper (ou billard électrique). Notre flipp
 ![Schéma flipper](Image/Schéma_flipper.png) ![dessin](Image/Table_jeux.png)
 
 Afin de marquer des points, le joueur doit soit passer entre les dauphins soit tapper contre les pièces triangulaires ou contre les bumpers.
-## Logiciels utilisés
-KiCAD (PCB), STM32CubeIDE (software), Onshape (Modélisation 3D)
+### Matériel
+Solénoïdes*4 : Heschen Electroaimant solénoïde, HS-1546B, DC24V, 1.5A, course 20 mm, type Push Pull
+Néopixels alimentées à 5 V
+Détails de la PCB seront donnés dans la partie concernée
+Photo diode : 
+
+### Logiciels utilisés
+KiCAD (design PCB), STM32CubeIDE (Software), Onshape (Modélisation 3D)
 
 ## Les Bumpers
 Pour réaliser les bumpers on utilise des **solénoïdes** que nous commençons par tester : 
