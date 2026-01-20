@@ -9,3 +9,4 @@ Fonctionalitées attendues:
 Liste de courses :
 - Régulateur WE en 3.3V
 - 3 Solénoïdes
+- Billes
