@@ -54,6 +54,13 @@ Afin d'afficher le score réalisé par le joueur nous devons réaliser un compte
 
 ![compteur_imprimé](Image/compteur_imprimé.png)
 
+## Sostware
+
+Voici le shéma fonctionnel de notre système.
+![Shéma](Image/image_2026-02-03_161649357.png)
+
+Il nous faut donc jeter un coup d'oeil aux différents capteurs afin de savoir quel information la STM va recevoir. 
+
 ## Le Châssis
 Afin d'avoir un support pour notre flipper, nous avons dessiné sur Onshape un châssis en prenant en compte la pente réglementaire pour un Flipper classique qui est de **6,5 °**.
 
@@ -61,6 +68,7 @@ Afin d'avoir un support pour notre flipper, nous avons dessiné sur Onshape un c
 
 Le châssis comporte une ouverture afin d'y brancher l'alimentation ainsi que des aérations permettant la ventilation de notre système.
 Après avoir réalisé ceci nous sommes entrain de faire la table de jeux qui sera réalisé en 2 couches (afin de pouvoir varier les épaisseurs et de pouvoir y emboîter les supports pour bumper ou batteur)
+
 # Licence
 Licence : MIT
 
