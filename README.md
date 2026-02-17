@@ -54,7 +54,7 @@ Afin d'afficher le score réalisé par le joueur nous devons réaliser un compte
 
 ![compteur_imprimé](Image/compteur_imprimé.png)
 
-## Sostware
+## Software
 
 Voici le shéma fonctionnel de notre système.
 ![Shéma](Image/image_2026-02-03_161649357.png)
