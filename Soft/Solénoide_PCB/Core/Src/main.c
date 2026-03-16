@@ -103,8 +103,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  loop();
+
     /* USER CODE BEGIN 3 */
+	  loop();
   }
   /* USER CODE END 3 */
 }
@@ -210,22 +211,26 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_Status_Pin|Com_Sol_A_Pin|Com_Sol_B_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_Status_Pin|Com_Sol_G_Pin|Com_Sol_F_Pin|D_in_Pin
+                          |Com_Sol_D_Pin|Com_Sol_C_Pin|Com_Sol_A_Pin|Com_Sol_B_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : LED_Status_Pin Com_Sol_A_Pin Com_Sol_B_Pin */
-  GPIO_InitStruct.Pin = LED_Status_Pin|Com_Sol_A_Pin|Com_Sol_B_Pin;
+  /*Configure GPIO pins : LED_Status_Pin Com_Sol_G_Pin Com_Sol_F_Pin D_in_Pin
+                           Com_Sol_D_Pin Com_Sol_C_Pin Com_Sol_A_Pin Com_Sol_B_Pin */
+  GPIO_InitStruct.Pin = LED_Status_Pin|Com_Sol_G_Pin|Com_Sol_F_Pin|D_in_Pin
+                          |Com_Sol_D_Pin|Com_Sol_C_Pin|Com_Sol_A_Pin|Com_Sol_B_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : Bouton_Actif_Pin */
-  GPIO_InitStruct.Pin = Bouton_Actif_Pin;
+  /*Configure GPIO pin : Bouton_Pin */
+  GPIO_InitStruct.Pin = Bouton_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(Bouton_Actif_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(Bouton_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

@@ -10,13 +10,16 @@
 #include "stm32g4xx_hal.h"
 
 void setup(void){
-	HAL_GPIO_WritePin(GPIOA, LED_Status, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
+	printf("Hello World! \r\n");
 }
 
 void loop(void){
-	if (HAL_GPIO_ReadPin(Bouton_Actif)==1){
-		HAL_GPIO_WritePin(GPIOA,Com_Sol_A,GPIO_PIN_SET);
-		HAL_delay(250);
-		HAL_GPIO_WritePin(GPIOA,Com_Sol_A,GPIO_PIN_RESET);
+	if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_8)==1){
+		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_10,GPIO_PIN_SET);
+		printf("Tir \n\r");
+		}
+	else{
+		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_10,GPIO_PIN_RESET);
 	}
 }
