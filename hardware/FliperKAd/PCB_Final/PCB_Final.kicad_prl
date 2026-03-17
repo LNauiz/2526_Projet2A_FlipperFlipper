@@ -33,13 +33,16 @@
       "footprint_text",
       "ratsnest",
       "grid",
+      "footprints_front",
+      "footprints_back",
       "footprint_values",
       "footprint_references",
       "tracks",
+      "bitmaps",
       "zones",
       "shapes"
     ],
-    "visible_layers": "00000000_00000000_0fffffff_ffffffeb",
+    "visible_layers": "00000000_00000000_0fffffff_ffffffaf",
     "zone_display_mode": 0
   },
   "git": {
