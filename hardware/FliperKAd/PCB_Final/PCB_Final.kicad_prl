@@ -8,12 +8,12 @@
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
-      "images": 1.0,
-      "pads": 0.800000011920929,
+      "images": 0.6,
+      "pads": 1.0,
       "shapes": 1.0,
       "tracks": 1.0,
-      "vias": 0.8100000023841858,
-      "zones": 0.25
+      "vias": 1.0,
+      "zones": 0.44999998807907104
     },
     "selection_filter": {
       "dimensions": true,
@@ -31,26 +31,15 @@
     "visible_items": [
       "vias",
       "footprint_text",
-      "footprint_anchors",
       "ratsnest",
       "grid",
-      "footprints_front",
-      "footprints_back",
       "footprint_values",
       "footprint_references",
       "tracks",
-      "drc_errors",
-      "drawing_sheet",
-      "bitmaps",
-      "pads",
       "zones",
-      "drc_warnings",
-      "drc_exclusions",
-      "locked_item_shadows",
-      "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_fffffff5_ffffffff",
+    "visible_layers": "00000000_00000000_0fffffff_ffffffeb",
     "zone_display_mode": 0
   },
   "git": {
@@ -93,18 +82,18 @@
       11
     ],
     "col_widths": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      162,
+      147,
+      102,
+      99,
+      101,
+      132,
+      98,
+      103,
+      91,
+      91,
+      91,
+      91
     ],
     "custom_group_rules": [],
     "expanded_rows": [],
