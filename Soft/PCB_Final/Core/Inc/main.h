@@ -59,24 +59,34 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define Bouton_Droit_Pin GPIO_PIN_1
+#define Bouton_Droit_GPIO_Port GPIOA
 #define LED_Status_Pin GPIO_PIN_4
 #define LED_Status_GPIO_Port GPIOA
-#define Com_Sol_G_Pin GPIO_PIN_5
-#define Com_Sol_G_GPIO_Port GPIOA
-#define Com_Sol_F_Pin GPIO_PIN_6
-#define Com_Sol_F_GPIO_Port GPIOA
-#define D_in_Pin GPIO_PIN_7
-#define D_in_GPIO_Port GPIOA
-#define Com_Sol_D_Pin GPIO_PIN_8
-#define Com_Sol_D_GPIO_Port GPIOA
-#define Com_Sol_C_Pin GPIO_PIN_9
-#define Com_Sol_C_GPIO_Port GPIOA
-#define Com_Sol_A_Pin GPIO_PIN_10
+#define Com_Sol_A_Pin GPIO_PIN_5
 #define Com_Sol_A_GPIO_Port GPIOA
-#define Com_Sol_B_Pin GPIO_PIN_11
+#define Com_Sol_B_Pin GPIO_PIN_6
 #define Com_Sol_B_GPIO_Port GPIOA
-#define Bouton_Pin GPIO_PIN_8
-#define Bouton_GPIO_Port GPIOB
+#define Com_Sol_C_Pin GPIO_PIN_7
+#define Com_Sol_C_GPIO_Port GPIOA
+#define Com_Sol_D_Pin GPIO_PIN_0
+#define Com_Sol_D_GPIO_Port GPIOB
+#define Com_Sol_E_Pin GPIO_PIN_8
+#define Com_Sol_E_GPIO_Port GPIOA
+#define Com_Sol_F_Pin GPIO_PIN_9
+#define Com_Sol_F_GPIO_Port GPIOA
+#define Com_Sol_G_Pin GPIO_PIN_10
+#define Com_Sol_G_GPIO_Port GPIOA
+#define Com_Sol_H_Pin GPIO_PIN_11
+#define Com_Sol_H_GPIO_Port GPIOA
+#define USR_Btn_Pin GPIO_PIN_12
+#define USR_Btn_GPIO_Port GPIOA
+#define CS_Pin GPIO_PIN_15
+#define CS_GPIO_Port GPIOA
+#define Bouton_Gauche_Pin GPIO_PIN_6
+#define Bouton_Gauche_GPIO_Port GPIOB
+#define BOOT_0_Pin GPIO_PIN_8
+#define BOOT_0_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
