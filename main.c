@@ -113,6 +113,42 @@ void print_sensors(void) {
 			"S: %4d %4d %4d %4d %4d %4d %4d %4d\r\n", sensor[0], sensor[1],
 			sensor[2], sensor[3], sensor[4], sensor[5], sensor[6], sensor[7]);
 	//HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	if (sensor[0]<1000 && deja_compte == 0){
+		score+=50;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[0]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[1]<1000 && deja_compte == 0){
+		score+=50;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[1]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[2]<1000 && deja_compte == 0){
+		score+=50;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[2]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[3]<1000 && deja_compte == 0){
+		score+=50;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[3]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
 	if (sensor[4]<1000 && deja_compte == 0){
 		score+=50;
 		deja_compte=1; //On bloque le comptage
@@ -120,6 +156,33 @@ void print_sensors(void) {
 		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
 	}
 	if (sensor[4]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[5]<1000 && deja_compte == 0){
+		score+=50;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[5]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[6]<1000 && deja_compte == 0){
+		score+=50;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[6]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[7]<1000 && deja_compte == 0){
+		score+=50;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[7]>1000){
 		deja_compte=0; //On réautorise le comptage
 	}
 }
