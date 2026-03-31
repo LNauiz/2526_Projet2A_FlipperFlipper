@@ -38,6 +38,17 @@ Nous devons encore modifier ces dessins afin d'éviter de trop gros frottement i
 La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont le principe est le suivant : 
 Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre Coilgun serait le suivant : 
 ![Calculs Coilgun](Image/Formules_Coilgun.png)
+
+## Le Compteur
+Afin d'afficher le score réalisé par le joueur nous devons réaliser un compteur, pour ce faire nous utiliserons des Néopixels, le code serait réalisé en langage C. Voici le support (réalisé sur Onshape) sur lequel nous voulons coller et souder les néopixels : 
+
+![compteur_imprimé](Image/compteur_imprimé.png)
+
+## Les Photodiodes
+Afin de détecter lorsque la balle passe entre les obstacles ou lorsqu'elle heurte l'obstacle trinagulaire du milieu de la table, nous utilisons des photodiodes.
+Les premiers tests avec un PCB fait par Monsieur Papazoglou ont été laborieux, on remarque que pour vérifier que ces photodiodes sont bien fonctionnelles nous pouvons lorsqu'elles sont branchées utiliser l'appareil photo de notre téléphone, lorsqu'une lumière violette (le laser) émane de la photodiode, cette dernière est fonctionnelle, si ce n'est pas le cas cela signifie que la photodiode a subi une dégradation irréversible (sûrement du à une alimentation excessive).
+![PCB avec des photodiodes](Image/photodiode.png)
+
 ## Le PCB
 Afin de commander les solénoïdes nous avons réalisé (sur KiCAD) et soudé un premier PCB que voici : 
 ![PCB 1](Image/PCB_1_soudé.png)
@@ -49,14 +60,6 @@ Lors des tests, le Buck de ce premier PCB est fortement monté en température. 
 ![PCB 2](Image/PCB_2_soudé.png)
 
 Lors des test, le Buck de ce PCB est également monté en température. Nous pensons que le problème viendrait d'un court-circuit créé lors de la soudure Pour poursuivre notre projet nous pensons donc changer le buck qui nous cause problème quel que soit le montage par le même type de régulateur à 3 pin que ce celui qui transforme le 24V en 12V. Nous avons construit le PCB avec la possibilité de séparer la partie puissance et la partie commande. Nous avons donc prévu de tester cette dernière lors des prochaines semaines et de commencer à concevoir le PCB final qui commandera l'ensemble du système.
-## Le Compteur
-Afin d'afficher le score réalisé par le joueur nous devons réaliser un compteur, pour ce faire nous utiliserons des Néopixels, le code serait réalisé en langage C. Voici le support (réalisé sur Onshape) sur lequel nous voulons coller et souder les néopixels : 
-
-![compteur_imprimé](Image/compteur_imprimé.png)
-## Les Capteurs
-Afin de détecter lorsque la balle passe entre les obstacles ou lorsqu'elle heurte l'obstacle trinagulaire du milieu de la table, nous utilisons des photodiodes.
-Les premiers tests avec un PCB fait par Monsieur Papazoglou ont été laborieux, on remarque que pour vérifier que ces photodiodes sont bien fonctionnelles nous pouvons lorsqu'elles sont branchées utiliser l'appareil photo de notre téléphone, lorsqu'une lumière violette (le laser) émane de la photodiode, cette dernière est fonctionnelle, si ce n'est pas le cas cela signifie que la photodiode a subi une dégradation irréversible (sûrement du à une alimentation excessive).
-![PCB avec des photodiodes](Image/photodiode.png)
 
 ## Software
 
