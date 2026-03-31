@@ -1,0 +1,11 @@
+../Core/Src/main.c:80:5:__io_putchar	1
+../Core/Src/main.c:85:6:read_and_decode_sensors	2
+../Core/Src/main.c:118:5:print_sensors	25
+../Core/Src/main.c:204:5:main	4
+../Core/Src/main.c:284:6:SystemClock_Config	4
+../Core/Src/main.c:329:13:MX_SPI1_Init	2
+../Core/Src/main.c:369:13:MX_TIM1_Init	5
+../Core/Src/main.c:439:13:MX_USART1_UART_Init	2
+../Core/Src/main.c:472:13:MX_DMA_Init	1
+../Core/Src/main.c:490:13:MX_GPIO_Init	1
+../Core/Src/main.c:538:6:Error_Handler	1
