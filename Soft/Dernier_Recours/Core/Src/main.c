@@ -19,8 +19,11 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
+#include <neopixel.h>
 
 /* USER CODE END Includes */
 
@@ -31,7 +34,17 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define SPI1_CS_Pin GPIO_PIN_6
+#define SPI1_CS_Port GPIOB
 
+uint8_t tx[16] = { 0 };     // dummy bytes to clock the slave
+uint8_t rx[16] = { 0 };     // buffer for sensor data
+uint16_t sensor[8];		  // nombre de capteurs
+int score = 0; // Initialisation du compteur à 0
+int deja_compte = 0; // Empêchera un effet rebond "flag"
+
+#define CS_LOW()  HAL_GPIO_WritePin(SPI1_CS_Port, SPI1_CS_Pin, GPIO_PIN_RESET)
+#define CS_HIGH() HAL_GPIO_WritePin(SPI1_CS_Port, SPI1_CS_Pin, GPIO_PIN_SET)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -46,6 +59,7 @@ TIM_HandleTypeDef htim1;
 DMA_HandleTypeDef hdma_tim1_ch1;
 
 /* USER CODE BEGIN PV */
+#define LED_NUMBER 7
 
 /* USER CODE END PV */
 
@@ -61,7 +75,124 @@ static void MX_SPI1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+int __io_putchar(int ch) {
+	HAL_UART_Transmit(&huart2, (uint8_t*) &ch, 1, HAL_MAX_DELAY);
+	return ch;
+}
 
+void read_and_decode_sensors(void) {
+    for (int i = 0; i < 8; i++) {
+        uint8_t tx_buff[3];
+        uint8_t rx_buff[3];
+
+        // Construction de l'octet de commande pour MCP3208
+        // Byte 0: Start bit (0x04)
+        // Byte 1: Single/Diff + Channel D2, D1, D0
+        // Pour MCP3208: Start=1, SGL=1, D2-D0=channel
+
+#define START_BIT 0x04
+#define SINGLE_BIT 0x02
+#define D2_POS 0x01
+
+        uint8_t d2 = ((i >> 2) & D2_POS);
+        tx_buff[0] = START_BIT | SINGLE_BIT | d2; // Start bit + SGL + D2
+        tx_buff[1] = (i << 6) & 0xC0;          // D1 + D0 + dummies
+        tx_buff[2] = 0x00;                     // Dummy byte
+
+        CS_LOW();
+        // On envoie 3 octets pour recevoir la réponse d'un canal
+        HAL_SPI_TransmitReceive(&hspi1, tx_buff, rx_buff, 3, 10);
+        CS_HIGH();
+
+        // Reconstruction sur 12 bits (les données chevauchent les octets 1 et 2)
+        // MCP3208 : Les 4 derniers bits de rx[1] et tout rx[2]
+        sensor[i] = ((rx_buff[1] & 0x0F) << 8) | rx_buff[2];
+
+        // Petit délai pour laisser l'ADC respirer (optionnel selon vitesse SPI)
+        // for(int k=0; k<100; k++);
+    }
+}
+
+int print_sensors(void) {
+	char buffer[100];
+	int len = snprintf(buffer, sizeof(buffer),
+			"S: %4d %4d %4d %4d %4d %4d %4d %4d\r\n", sensor[0], sensor[1],
+			sensor[2], sensor[3], sensor[4], sensor[5], sensor[6], sensor[7]);
+	//HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	if (sensor[0]<1000 && deja_compte == 0){
+		score+=1;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[0]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[1]<1000 && deja_compte == 0){
+		score+=1;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[1]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[2]<1000 && deja_compte == 0){
+		score+=1;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[2]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[3]<1000 && deja_compte == 0){
+		score+=1;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[3]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[4]<1000 && deja_compte == 0){
+		score+=1;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[4]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[5]<1000 && deja_compte == 0){
+		score+=1;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[5]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[6]<1000 && deja_compte == 0){
+		score+=1;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[6]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	if (sensor[7]<1000 && deja_compte == 0){
+		score+=1;
+		deja_compte=1; //On bloque le comptage
+		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+	}
+	if (sensor[7]>1000){
+		deja_compte=0; //On réautorise le comptage
+	}
+	return score;
+}
 /* USER CODE END 0 */
 
 /**
@@ -97,13 +228,45 @@ int main(void)
   MX_TIM1_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+  CS_HIGH();
 
+  HAL_TIM_Base_Start(&htim1);
+
+
+  int red = 255;
+  int green = 255;
+  int blue = 255;
+  const uint8_t digits[10]={{1,1,0,1,1,1,1},{0,0,0,1,0,0,1},
+		  	  	  	  	  	{1,0,1,0,1,1,1},{1,0,1,1,1,0,1},
+							{0,1,1,1,0,0,1},{1,1,1,1,1,0,0},
+							{1,1,1,1,1,1,0},{1,0,1,1,0,0,1},
+							{1,1,1,1,1,1,1},{1,1,1,1,1,0,1}};
+  led_render();
+  uint8_t result = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+		read_and_decode_sensors();
+		result = print_sensors();
+
+		if (result>=10){
+			  		  result=0;
+			  	  }
+			  	//for (int j=0; j < 6; j++){
+				    for (int i = 0; i < LED_NUMBER; i++) {
+				        if(digits[result][i]==1) {
+				            led_set_RGB(i,255,255,255);
+				        }
+				        else {
+				            led_set_RGB(i, 0, 0 , 0);
+				        }
+				    //}
+			  	}
+		led_render();
+		HAL_Delay(10); //besoin ajustement (balle à 6m/s sur 3,4mm)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

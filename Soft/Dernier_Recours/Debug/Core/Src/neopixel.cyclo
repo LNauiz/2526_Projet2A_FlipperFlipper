@@ -1,0 +1,3 @@
+../Core/Src/neopixel.c:21:6:led_set_RGB	2
+../Core/Src/neopixel.c:29:6:led_render	6
+../Core/Src/neopixel.c:54:6:led_rainbow_test	4
