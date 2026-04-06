@@ -80,9 +80,9 @@ Il a aussi des encoches sur les côtés pour pouvoir y encaster la table de 6 mm
 
 ## La Table de jeux
 Afin d'encastrer au mieux les modules (bumper, batteur, capteurs...) notre table sera realisée en 2 couches : une première de 3 mm d'épaisseur en MDF que voici, le dessus sera gravé afin de placer au mieux les obstacles fixes : 
-![Table 3 mm](Images/Table_3mm.png)
+![Table 3 mm](Image/Table_3mm.png)
 une seconde couche de 6 mm d'épaisseur toujours en MDF qui comportera des trous différents de celle de 3 mm afin de pouvoir y emboiter les obstacles.
-![Table 6 mm](Images/Table_6mm.png)
+![Table 6 mm](Image/Table_6mm.png)
 Pour être sûr du résultat des trous d'alignement sont réalisés.
 
 # Licence
