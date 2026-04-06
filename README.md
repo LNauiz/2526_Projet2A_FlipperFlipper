@@ -65,8 +65,8 @@ Lors des test, le Buck de ce PCB est également monté en température. Nous pen
 
 ## Software
 
-Voici le shéma fonctionnel de notre système.
-![Shéma](Image/image_2026-02-03_161649357.png)
+Voici le schéma fonctionnel de notre système.
+![Schéma](Image/image_2026-02-03_161649357.png)
 
 Il nous faut donc jeter un coup d'oeil aux différents capteurs afin de savoir quel information la STM va recevoir. 
 
@@ -76,7 +76,14 @@ Afin d'avoir un support pour notre flipper, nous avons dessiné sur Onshape un c
 ![Châssis Flipper](Image/Châssis_Flipper.png)
 
 Le châssis comporte une ouverture afin d'y brancher l'alimentation ainsi que des aérations permettant la ventilation de notre système.
-Après avoir réalisé ceci nous sommes entrain de faire la table de jeux qui sera réalisé en 2 couches (afin de pouvoir varier les épaisseurs et de pouvoir y emboîter les supports pour bumper ou batteur)
+Il a aussi des encoches sur les côtés pour pouvoir y encaster la table de 6 mm d'épaisseur, on a aussi fait des trous afin de pouvoir y passer les boutons pousseoirs.
+
+## La Table de jeux
+Afin d'encastrer au mieux les modules (bumper, batteur, capteurs...) notre table sera realisée en 2 couches : une première de 3 mm d'épaisseur en MDF que voici, le dessus sera gravé afin de placer au mieux les obstacles fixes : 
+![Table 3 mm](Images/Table_3mm.png)
+une seconde couche de 6 mm d'épaisseur toujours en MDF qui comportera des trous différents de celle de 3 mm afin de pouvoir y emboiter les obstacles.
+![Table 6 mm](Images/Table_6mm.png)
+Pour être sûr du résultat des trous d'alignement sont réalisés.
 
 # Licence
 Licence : MIT
