@@ -9,6 +9,8 @@ Solénoïdes*4 : Heschen Electroaimant solénoïde, HS-1546B, DC24V, 1.5A, cours
 
 Néopixels alimentées à 5 V
 
+Photodiodes*3
+
 Détails de la PCB seront donnés dans la partie concernée
 
 ### Logiciels utilisés
