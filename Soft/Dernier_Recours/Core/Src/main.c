@@ -55,9 +55,12 @@ int deja_compte = 0; // Empêchera un effet rebond "flag"
 SPI_HandleTypeDef hspi1;
 
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim2;
 DMA_HandleTypeDef hdma_tim1_ch1;
+DMA_HandleTypeDef hdma_tim2_ch1;
 
 UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 #define LED_NUMBER 7
@@ -71,6 +74,8 @@ static void MX_GPIO_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_USART2_UART_Init(void);
+static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -78,7 +83,7 @@ static void MX_USART1_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 int __io_putchar(int ch) {
-	HAL_UART_Transmit(&huart1, (uint8_t*) &ch, 1, HAL_MAX_DELAY);
+	HAL_UART_Transmit(&huart2, (uint8_t*) &ch, 1, HAL_MAX_DELAY);
 	return ch;
 }
 
@@ -125,7 +130,7 @@ int print_sensors(void) {
 		score+=1;
 		deja_compte=1; //On bloque le comptage
 		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
-		HAL_UART_Transmit(&huart1, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
 	}
 	if (sensor[0]>1000){
 		deja_compte=0; //On réautorise le comptage
@@ -134,7 +139,7 @@ int print_sensors(void) {
 		score+=1;
 		deja_compte=1; //On bloque le comptage
 		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
-		HAL_UART_Transmit(&huart1, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
 	}
 	if (sensor[1]>1000){
 		deja_compte=0; //On réautorise le comptage
@@ -143,7 +148,7 @@ int print_sensors(void) {
 		score+=1;
 		deja_compte=1; //On bloque le comptage
 		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
-		HAL_UART_Transmit(&huart1, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
 	}
 	if (sensor[2]>1000){
 		deja_compte=0; //On réautorise le comptage
@@ -152,7 +157,7 @@ int print_sensors(void) {
 		score+=1;
 		deja_compte=1; //On bloque le comptage
 		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
-		HAL_UART_Transmit(&huart1, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
 	}
 	if (sensor[3]>1000){
 		deja_compte=0; //On réautorise le comptage
@@ -161,7 +166,7 @@ int print_sensors(void) {
 		score+=1;
 		deja_compte=1; //On bloque le comptage
 		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
-		HAL_UART_Transmit(&huart1, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
 	}
 	if (sensor[4]>1000){
 		deja_compte=0; //On réautorise le comptage
@@ -170,7 +175,7 @@ int print_sensors(void) {
 		score+=1;
 		deja_compte=1; //On bloque le comptage
 		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
-		HAL_UART_Transmit(&huart1, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
 	}
 	if (sensor[5]>1000){
 		deja_compte=0; //On réautorise le comptage
@@ -179,7 +184,7 @@ int print_sensors(void) {
 		score+=1;
 		deja_compte=1; //On bloque le comptage
 		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
-		HAL_UART_Transmit(&huart1, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
 	}
 	if (sensor[6]>1000){
 		deja_compte=0; //On réautorise le comptage
@@ -188,7 +193,7 @@ int print_sensors(void) {
 		score+=1;
 		deja_compte=1; //On bloque le comptage
 		len = snprintf(buffer, sizeof(buffer), "Score: %d\n\r", score);
-		HAL_UART_Transmit(&huart1, (uint8_t*) buffer, len, HAL_MAX_DELAY);
+		HAL_UART_Transmit(&huart2, (uint8_t*) buffer, len, HAL_MAX_DELAY);
 	}
 	if (sensor[7]>1000){
 		deja_compte=0; //On réautorise le comptage
@@ -230,8 +235,10 @@ int main(void)
   MX_TIM1_Init();
   MX_SPI1_Init();
   MX_USART1_UART_Init();
+  MX_USART2_UART_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  CS_HIGH();
+  //CS_HIGH();
 
   HAL_TIM_Base_Start(&htim1);
 
@@ -245,29 +252,37 @@ int main(void)
 							{1,1,1,1,1,1,0},{1,0,1,1,0,0,1},
 							{1,1,1,1,1,1,1},{1,1,1,1,1,0,1}};
   led_render();
-  uint8_t result = 0;
+  int result = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  printf("Hello World \n\r");
   while (1)
   {
 		read_and_decode_sensors();
-		result = print_sensors();
+		result += print_sensors();
+
+		if (HAL_GPIO_ReadPin(Sol_In_GPIO_Port,Sol_In_Pin)){
+				result+=1;
+				HAL_Delay(50);
+				printf("ding \n\r");
+			}
 
 		if (result>=10){
 			  		  result=0;
 			  	  }
 			  	//for (int j=0; j < 6; j++){
-				    for (int i = 0; i < LED_NUMBER; i++) {
-				        if(digits[result][i]==1) {
-				            led_set_RGB(i,255,255,255);
-				        }
-				        else {
-				            led_set_RGB(i, 0, 0 , 0);
-				        }
+		//printf("%d \n\r",result);
+		for (int i = 0; i < LED_NUMBER; i++) {
+	        if(digits[result][i]==1) {
+	        	led_set_RGB(i,255,255,255);
+	        }
+	        else {
+            led_set_RGB(i, 0, 0 , 0);
+	        }
 				    //}
-			  	}
+		}
 		led_render();
 		HAL_Delay(10); //besoin ajustement (balle à 6m/s sur 3,4mm)
     /* USER CODE END WHILE */
@@ -373,6 +388,7 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 0 */
 
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
   TIM_OC_InitTypeDef sConfigOC = {0};
   TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
@@ -383,10 +399,19 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 0;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 65535;
+  htim1.Init.Period = 19;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
   if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
   {
     Error_Handler();
@@ -432,6 +457,65 @@ static void MX_TIM1_Init(void)
 }
 
 /**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 0;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 19;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
+  HAL_TIM_MspPostInit(&htim2);
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -467,6 +551,41 @@ static void MX_USART1_UART_Init(void)
 }
 
 /**
+  * @brief USART2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART2_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART2_Init 0 */
+
+  /* USER CODE END USART2_Init 0 */
+
+  /* USER CODE BEGIN USART2_Init 1 */
+
+  /* USER CODE END USART2_Init 1 */
+  huart2.Instance = USART2;
+  huart2.Init.BaudRate = 115200;
+  huart2.Init.WordLength = UART_WORDLENGTH_8B;
+  huart2.Init.StopBits = UART_STOPBITS_1;
+  huart2.Init.Parity = UART_PARITY_NONE;
+  huart2.Init.Mode = UART_MODE_TX_RX;
+  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART2_Init 2 */
+
+  /* USER CODE END USART2_Init 2 */
+
+}
+
+/**
   * Enable DMA controller clock
   */
 static void MX_DMA_Init(void)
@@ -479,6 +598,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel2_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
+  /* DMA1_Channel5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel5_IRQn);
 
 }
 
@@ -494,27 +616,24 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, Com_Sol_A_Pin|Com_Sol_B_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : Detec_bille_Pin Bouton_droit_Pin */
-  GPIO_InitStruct.Pin = Detec_bille_Pin|Bouton_droit_Pin;
+  /*Configure GPIO pin : Sol_In_Pin */
+  GPIO_InitStruct.Pin = Sol_In_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(Sol_In_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Com_Sol_A_Pin Com_Sol_B_Pin */
-  GPIO_InitStruct.Pin = Com_Sol_A_Pin|Com_Sol_B_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  /*Configure GPIO pin : Bouton_droit_Pin */
+  GPIO_InitStruct.Pin = Bouton_droit_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(Bouton_droit_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : CS_Pin */
   GPIO_InitStruct.Pin = CS_Pin;

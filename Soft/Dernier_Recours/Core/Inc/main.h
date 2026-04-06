@@ -59,12 +59,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define Detec_bille_Pin GPIO_PIN_2
-#define Detec_bille_GPIO_Port GPIOA
-#define Com_Sol_A_Pin GPIO_PIN_13
-#define Com_Sol_A_GPIO_Port GPIOA
-#define Com_Sol_B_Pin GPIO_PIN_14
-#define Com_Sol_B_GPIO_Port GPIOA
+#define Sol_In_Pin GPIO_PIN_14
+#define Sol_In_GPIO_Port GPIOC
 #define Bouton_droit_Pin GPIO_PIN_15
 #define Bouton_droit_GPIO_Port GPIOA
 #define CS_Pin GPIO_PIN_6
