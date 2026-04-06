@@ -41,6 +41,8 @@ La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont
 Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre Coilgun serait le suivant : 
 ![Calculs Coilgun](Image/Formules_Coilgun.png)
 
+Nous avons fini par nous rabattre sur un simple ressort monté sur une tige filetée.
+
 ## Le Compteur
 Afin d'afficher le score réalisé par le joueur nous devons réaliser un compteur, pour ce faire nous utiliserons des Néopixels, le code serait réalisé en langage C. Voici le support (réalisé sur Onshape) sur lequel nous voulons coller et souder les néopixels : 
 
