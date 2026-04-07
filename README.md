@@ -44,7 +44,8 @@ Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 
 Nous avons fini par nous rabattre sur un simple ressort monté sur une tige filetée.
 
 ## Le Compteur
-Afin d'afficher le score réalisé par le joueur nous devons réaliser un compteur, pour ce faire nous utiliserons des Néopixels, le code serait réalisé en langage C. Voici le support (réalisé sur Onshape) sur lequel nous voulons coller et souder les néopixels : 
+Afin d'afficher le score réalisé par le joueur nous devons réaliser un compteur, on utilisera un afficheur 7 segments.\
+Pour ce faire nous utiliserons des Néopixels, le code serait réalisé en langage C. Voici le support (réalisé sur Onshape) sur lequel nous voulons coller et souder les néopixels : 
 
 ![compteur_imprimé](Image/compteur.png) 
 
