@@ -45,14 +45,16 @@ Nous avons fini par nous rabattre sur un simple ressort monté sur une tige file
 
 ## Le Compteur
 Afin d'afficher le score réalisé par le joueur nous devons réaliser un compteur, on utilisera un afficheur 7 segments.\
-Pour ce faire nous utiliserons des Néopixels, le code serait réalisé en langage C. Voici le support (réalisé sur Onshape) sur lequel nous voulons coller et souder les néopixels : 
+Pour ce faire nous utiliserons des Néopixels, le code serait réalisé en langage C.\
+Voici le support (réalisé sur Onshape) sur lequel nous voulons coller et souder les néopixels : 
 
 ![compteur_imprimé](Image/compteur.png) 
 
-Afin de dissiper la lumière pour ne pas être ébloui par les LED, on peut mettre un difuseur lumineux qui se compose de 2 couches de PLA.
+Afin de dissiper la lumière pour ne pas être ébloui par les LED, on peut mettre un difuseur lumineux qui se compose de 1 à 2 couches de PLA.\
+Nous avons remarqué que chaque LED doit être séparé par un mur afin de ne pas éclairer les parties des autres (par exemple: le 1 ressemble au 3 sans mur).
 
 ## Les Photodiodes
-Afin de détecter lorsque la balle passe entre les obstacles ou lorsqu'elle heurte l'obstacle trinagulaire du milieu de la table, nous utilisons des photodiodes.
+Afin de détecter lorsque la balle passe entre les obstacles ou lorsqu'elle heurte l'obstacle triangulaire du milieu de la table, nous utilisons des photodiodes.
 Les premiers tests avec un PCB fait par Monsieur Papazoglou ont été laborieux, on remarque que pour vérifier que ces photodiodes sont bien fonctionnelles nous pouvons lorsqu'elles sont branchées utiliser l'appareil photo de notre téléphone, lorsqu'une lumière violette (le laser) émane de la photodiode, cette dernière est fonctionnelle, si ce n'est pas le cas cela signifie que la photodiode a subi une dégradation irréversible (sûrement du à une alimentation excessive).
 ![PCB avec des photodiodes](Image/photodiode.png)
 
