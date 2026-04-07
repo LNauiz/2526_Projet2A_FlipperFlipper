@@ -82,6 +82,9 @@ Lors des tests, le Buck de ce premier PCB est fortement monté en température. 
 
 Lors des test, le Buck de ce PCB est également monté en température. Nous pensons que le problème viendrait d'un court-circuit créé lors de la soudure Pour poursuivre notre projet nous pensons donc changer le buck qui nous cause problème quel que soit le montage par le même type de régulateur à 3 pin que ce celui qui transforme le 24V en 12V. Nous avons construit le PCB avec la possibilité de séparer la partie puissance et la partie commande. Nous avons donc prévu de tester cette dernière lors des prochaines semaines et de commencer à concevoir le PCB final qui commandera l'ensemble du système.
 
+Le PCB final a été réalisé
+![PCB 3](Image/Vu3D.png)
+
 ## Software
 
 Voici le shéma fonctionnel de notre système.
