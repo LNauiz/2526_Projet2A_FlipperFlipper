@@ -87,10 +87,20 @@ Le PCB final a été réalisé
 
 ## Software
 
-Voici le shéma fonctionnel de notre système.
-![Shéma](Image/image_2026-02-03_161649357.png)
+Voici le schéma fonctionnel de notre système.
+![Schéma](Image/image_2026-02-03_161649357.png)
 
 Il nous faut donc jeter un coup d'oeil aux différents capteurs afin de savoir quel information la STM va recevoir. 
+
+## La table de jeux
+Afin de réaliser la table de jeux de notre flipper, nous avons décidé de la faire en 2 couches pour y encastrer les différents modules (bumper, batteur...).
+Notre première couche est du MDF de 3 mm, gravé afin que nous puissions placer les élèments de la table le mieux possible (rampe de lancement, dauphins...)
+
+![Table 3mm](Image/Table_3mm.png)
+
+Notre deuxième couche est du MDF de 6 mm, des trous d'alignement sont prévus dans les 2 couches pour faciliter la construction
+
+![Table 6mm](Image/Table_6mm.png)
 
 ## Le Châssis
 Afin d'avoir un support pour notre flipper, nous avons dessiné sur Onshape un châssis en prenant en compte la pente réglementaire pour un Flipper classique qui est de **6,5 °**.
