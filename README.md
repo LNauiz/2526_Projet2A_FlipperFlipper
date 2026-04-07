@@ -47,7 +47,7 @@ Nous avons fini par nous rabattre sur un simple ressort monté sur une tige file
 
 ## Les boutons
 
-Après plusieurs tests, nous avons remarqué que les boutons qui étaient, d'après la datasheet, pour du 5V fonctionnaient en 24V. Afin d'avoir un prototype "fonctionnel", nous avons donc simplement branché les batteurs de cette manière: 24V --- Bouton --- Batteur.
+Après plusieurs tests, nous avons remarqué que les boutons qui étaient, d'après la datasheet, pour du 5V fonctionnaient en 24V. Afin d'avoir un prototype "fonctionnel", nous avons donc simplement branché les batteurs de cette manière: 24V --- Bouton --- Batteur.\
 On a remarqué que les écrous nylstops avaient une certaine marge de mouvement, ce qui désaxe les batteurs au fil du temps.
  
 ## Le Compteur
