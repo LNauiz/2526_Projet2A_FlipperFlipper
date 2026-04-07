@@ -102,6 +102,10 @@ Notre deuxième couche est du MDF de 6 mm, des trous d'alignement sont prévus d
 
 ![Table 6mm](Image/Table_6mm.png)
 
+Voici le rendu final de la table, une fois assemblée (il faudrait coller les 2 couches de table pour avoir un meilleur rendu)
+
+![Table assemblée](Image/full_piece.jpeg)
+
 ## Le Châssis
 Afin d'avoir un support pour notre flipper, nous avons dessiné sur Onshape un châssis en prenant en compte la pente réglementaire pour un Flipper classique qui est de **6,5 °**.
 
