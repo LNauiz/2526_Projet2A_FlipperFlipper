@@ -68,7 +68,6 @@ Nous avons remarqué que chaque LED doit être séparé par un mur afin de ne pa
 ## Les Photodiodes
 Afin de détecter lorsque la balle passe entre les obstacles ou lorsqu'elle heurte l'obstacle triangulaire du milieu de la table, nous utilisons des photodiodes.
 Les premiers tests avec un PCB fait par Monsieur Papazoglou ont été laborieux, on remarque que pour vérifier que ces photodiodes sont bien fonctionnelles nous pouvons lorsqu'elles sont branchées utiliser l'appareil photo de notre téléphone, lorsqu'une lumière violette (le laser) émane de la photodiode, cette dernière est fonctionnelle, si ce n'est pas le cas cela signifie que la photodiode a subi une dégradation irréversible (sûrement du à une alimentation excessive).
-![PCB avec des photodiodes](Image/photodiode.png)
 
 ## Le PCB
 Afin de commander les solénoïdes nous avons réalisé (sur KiCAD) et soudé un premier PCB que voici : 
