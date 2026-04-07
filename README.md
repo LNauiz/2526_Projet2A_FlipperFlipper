@@ -27,9 +27,9 @@ Pour réaliser cet "abattement" on utilise des **solénoïdes** que nous commen�
 
 Afin d'utiliser ces solénoïdes pour réaliser des bumpers nous avons besoin d'un support (que nous avons dessiné sur Onshape) :
 
-![Support bumper imprimé](Image/Bumper_imprimé.png)
+![Support bumper imprimé](Image/Bumper_Vfinal.png)
 
-Nous sommes actuellement en train d'étudier si le remplissage par défaut est adapté à l'utilisation que nous souhaitons en faire.
+Pour relier la colerette au solénoïde, on utilise des tiges filetés et des écrous nylstop ainsi qu'une pièce imprimé en 3d calée dans le solénoïde.
 
 Afin de détecter si la balle a touché le bumper, nous avons entouré la base et le mât du bumper de scotch cuivré. La balle, en contact avec les deux morceaux de scotch, ferme le cicuit connecté à un GPIO pin de la STM, ce qui permet de commander le solénoïde du bumper.
 
@@ -38,14 +38,14 @@ Afin de détecter si la balle a touché le bumper, nous avons entouré la base e
 ## Les Batteurs
 Les batteurs sont au nombre de 2 et seront contrôlés par des boutons poussoirs qui activeront d'autres solénoïdes. Ainsi nous avons du réaliser un dispositif afin de pouvoir tranformer la translation produite par le solénoïde en rotation de 60° pour les batteurs. Par Onshape, on modélise les pièces suivantes : 
 
-![Batteur total](Image/Batteur_onshape.png) ![batteur uniquement](Image/batteur.png) ![raccordement](Image/raccordement_onshape.png)
+![Batteur total](Image/Batteur_Vfinal.png) ![batteur uniquement](Image/batteur.png)
 
-Nous devons encore modifier ces dessins afin d'éviter de trop gros frottement il est nécessaire d'ajouter des écrous ainsi que des tiges filletées à l'intérieur des pièces.\
-On a remarqué que les écrous nylstops avaient une certaine marge de mouvement, ce qui désaxe les batteurs au fil du temps.
+Il est nécessaire d'ajouter des écrous nylstops à l'intérieur des pièces pour ne pas que ces derniers se dévissent.\
+Malgré cela, on a remarqué que les écrous nylstops avaient une certaine marge de mouvement, ce qui désaxe les batteurs au fil du temps.
 
 ## Le Lanceur
 La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont le principe est le suivant : 
-Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre Coilgun serait le suivant : 
+Nous prenons une balle de 25mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre Coilgun serait le suivant : 
 ![Calculs Coilgun](Image/Formules_Coilgun.png)
 
 Nous avons fini par nous rabattre sur un simple ressort monté sur une tige filetée.
