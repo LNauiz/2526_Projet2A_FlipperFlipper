@@ -32,12 +32,17 @@ Afin d'utiliser ces solénoïdes pour réaliser des bumpers nous avons besoin d'
 Nous sommes actuellement en train d'étudier si le remplissage par défaut est adapté à l'utilisation que nous souhaitons en faire.
 
 Afin de détecter si la balle a touché le bumper, nous avons entouré la base et le mât du bumper de scotch cuivré. La balle, en contact avec les deux morceaux de scotch, ferme le cicuit connecté à un GPIO pin de la STM, ce qui permet de commander le solénoïde du bumper.
+
+![Scotch](Image/scotch.jpeg)
+![Bottom](Image/lower_bumper.jpeg)
 ## Les Batteurs
 Les batteurs sont au nombre de 2 et seront contrôlés par des boutons poussoirs qui activeront d'autres solénoïdes. Ainsi nous avons du réaliser un dispositif afin de pouvoir tranformer la translation produite par le solénoïde en rotation de 60° pour les batteurs. Par Onshape, on modélise les pièces suivantes : 
 
 ![Batteur total](Image/Batteur_onshape.png) ![batteur uniquement](Image/batteur.png) ![raccordement](Image/raccordement_onshape.png)
 
-Nous devons encore modifier ces dessins afin d'éviter de trop gros frottement il est nécessaire d'ajouter des écrous ainsi que des tiges filletées à l'intérieur des pièces.
+Nous devons encore modifier ces dessins afin d'éviter de trop gros frottement il est nécessaire d'ajouter des écrous ainsi que des tiges filletées à l'intérieur des pièces.\
+On a remarqué que les écrous nylstops avaient une certaine marge de mouvement, ce qui désaxe les batteurs au fil du temps.
+
 ## Le Lanceur
 La première idée afin de réaliser le lanceur est de réaliser un Coilgun dont le principe est le suivant : 
 Nous prenons une balle de 27mm de diamètre que nous voulons faire aller à **6 m/s** lors du lancement ainsi le dimmensionnement de notre Coilgun serait le suivant : 
@@ -48,8 +53,8 @@ Nous avons fini par nous rabattre sur un simple ressort monté sur une tige file
 ## Les boutons
 
 Après plusieurs tests, nous avons remarqué que les boutons qui étaient, d'après la datasheet, pour du 5V fonctionnaient en 24V. Afin d'avoir un prototype "fonctionnel", nous avons donc simplement branché les batteurs de cette manière: 24V --- Bouton --- Batteur.\
-On a remarqué que les écrous nylstops avaient une certaine marge de mouvement, ce qui désaxe les batteurs au fil du temps.
- 
+![Button](Image/shitty_button.jpeg)
+
 ## Le Compteur
 Afin d'afficher le score réalisé par le joueur nous devons réaliser un compteur, on utilisera un afficheur 7 segments.\
 Pour ce faire nous utiliserons des Néopixels, le code serait réalisé en langage C.\
